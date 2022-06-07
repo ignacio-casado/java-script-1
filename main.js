@@ -4,9 +4,10 @@
 
 
 let numeroDeUsuario = 1;
-let = menu;
+let menu = "menu" ;
 let puntaje = 0;
 let contadorDeUsuario = 0;
+const edad = 20;
 
 /* definimos funciones */
 
@@ -25,11 +26,13 @@ const contador = () =>{
         alert(`Se cometio un error en los datos por favor reingresar nombre y apellido`);
     }
 }
-const juego = () => {
-    const edad = 20;
-    alert(`Ahora si ${ingreseNombre} ${ingreseApellido} hora de jugar`);
+ 
+/* alert(`Ahora si ${ingreseNombre} ${ingreseApellido} hora de jugar`); */
 
-    for (let i = 15; i >= 0; i--){
+const juego = () => {
+   
+
+    for (let i = 14; i >= 0; i--){
 
         let adivinar = Number(prompt("Hola soy Ignacio Casado si adivinas mi edad te ganas una hamburguesa tienes 15 intentos"));
 
