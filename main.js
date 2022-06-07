@@ -21,6 +21,9 @@ const contador = () =>{
     if(ingreseNombre == true && ingreseApellido == true){
         contadorDeUsuario = contadorDeUsuario + 1;
     }
+    else{
+        alert(`Se cometio un error en los datos por favor reingresar nombre y apellido`);
+    }
 }
 const juego = () => {
     const edad = 20;
@@ -58,7 +61,7 @@ function mensajeAlert(mensaje){
 
 /* menu del juego */
 do{
-    let menu = Number(prompt(`
+    menu = Number(prompt(`
     Bienvenidos al juego de adivinar mi edad
 
     1 - Registrar nombre de usuario.
