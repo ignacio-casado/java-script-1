@@ -16,6 +16,7 @@ const nombreDeUsuario = () =>{
     let ingreseNombre = prompt("Ingrese su nombre");
     let ingreseApellido = prompt("Ingrese su apellido");
     mensajeAlert(`Bienvenido ${ingreseNombre} ${ingreseApellido} sos el jugador numero ${contadorDeUsuario}`);
+    
 }
 
 const contador = () =>{
@@ -62,6 +63,7 @@ function mensajeAlert(mensaje){
     alert(mensaje);
 }
 
+
 /* menu del juego */
 do{
     menu = Number(prompt(`
@@ -87,10 +89,11 @@ do{
             puntuacion();
             break;
         }
-        case 4: {
+         case 4: {
             alert("Hasta pronto");
             break;
         }
+       
         default: {
             alert("Dato no valido");
         }
@@ -98,5 +101,55 @@ do{
     }
 }while(menu !== 4 );
 
+/* array */
+let maximosGanadores = [{id:  4, nombre: "Cristiano Ronaldo", puntaje: 25000, fecha: "23/02/2002", sexo: "M"},
+                        {id: 2, nombre: "Gloria Martinez", puntaje: 45000, fecha: "26/08/2007", sexo: "F" },
+                        {id: 1, nombre: "Luis Gutierrez", puntaje: 4000, fecha: "05/03/2020", sexo: "M"},
+                        {id: 5, nombre: "Chris Evans", puntaje: 10900, fecha: "02/08/2010", sexo: "M"  },
+                        {id: 8, nombre: "Fernanda Carolina", puntaje: 7800, fecha: "13/09/2009", sexo: "Otro" },
+                        {id: 9, nombre: "Juan Quintero", puntaje: 67000, fecha: "09/12/2018", sexo: "M" },
+                        {id: 10, nombre: "Michael Ruiz", puntaje: 23300, fecha: "12/10/2013", sexo: "Otro"  },
+                        {id: 3, nombre: "Igncaio Casad", puntaje: 12000, fecha: "20/08/2021", sexo: "M" },
+                        {id: 6, nombre: "Martina Rodriguez", puntaje: 19000, fecha: "08/06/2006", sexo: "F" },
+                        {id: 7, nombre: "Martina Rodriguez", puntaje: 19000, fecha: "24/03/2021", sexo: "F" }];
 
+
+
+let navegar = Number(prompt(
+    `Desea ver los maximos ganadores del juego?
+    1 - Si
+    2 - No
+                            `))
+do{
+    if(navegar == 1){
+        console.log( maximosGanadores);
+        break;
+    }
+    else if(navegar == 2){
+        break;
+    }
+    else{
+        break;
+    }
+}while(navegar = true);
+
+
+let busqueda = Number(prompt(
+    `
+     1 - filtrar por puntaje
+     2 - filtrar pos sexo`))
+
+switch(busqueda){
+    case 1: {
+        const buscadorPuntaje = maximosGanadores.filter((el) = el.puntaje < 67000);
+        console.log(buscadorPuntaje);
+        break;
+       
+    }
+    case 2: {
+        const buscadorSexo = maximosGanadores.find((el) = el.sexo )
+        console.log(buscadorSexo);
+        break;
+    }
+}
 
