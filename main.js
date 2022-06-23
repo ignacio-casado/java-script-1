@@ -11,15 +11,15 @@ const edad = 20;
 
 /* definimos funciones */
 
-const nombreDeUsuario = () =>{
+/* const nombreDeUsuario = () =>{
     alert("Bienvenido a juega con Ignacio");
     let ingreseNombre = prompt("Ingrese su nombre");
     let ingreseApellido = prompt("Ingrese su apellido");
     mensajeAlert(`Bienvenido ${ingreseNombre} ${ingreseApellido} sos el jugador numero ${contadorDeUsuario}`);
     
-}
+} */
 
-const contador = () =>{
+/* const contador = () =>{
     if(ingreseNombre == true && ingreseApellido == true){
         contadorDeUsuario = contadorDeUsuario + 1;
     }
@@ -30,7 +30,7 @@ const contador = () =>{
  
 /* alert(`Ahora si ${ingreseNombre} ${ingreseApellido} hora de jugar`); */
 
-const juego = () => {
+/* const juego = () => {
    
 
     for (let i = 14; i >= 0; i--){
@@ -50,9 +50,9 @@ const juego = () => {
             continue;
         }
 }
-}
+} */ 
 
-const puntuacion = () =>{
+/* const puntuacion = () =>{
     if (adivinar = true){
         puntaje = puntaje + 10;
         alert(`Tu puntaje es de ${puntaje} puntos`);
@@ -62,10 +62,10 @@ const puntuacion = () =>{
 function mensajeAlert(mensaje){
     alert(mensaje);
 }
-
+ */
 
 /* menu del juego */
-do{
+/* do{
     menu = Number(prompt(`
     Bienvenidos al juego de adivinar mi edad
 
@@ -102,7 +102,7 @@ do{
 }while(menu !== 4 );
 
 /* array */
-let maximosGanadores = [{id:  4, nombre: "Cristiano Ronaldo", puntaje: 25000, fecha: "23/02/2002", sexo: "M"},
+/* let maximosGanadores = [{id:  4, nombre: "Cristiano Ronaldo", puntaje: 25000, fecha: "23/02/2002", sexo: "M"},
                         {id: 2, nombre: "Gloria Martinez", puntaje: 45000, fecha: "26/08/2007", sexo: "F" },
                         {id: 1, nombre: "Luis Gutierrez", puntaje: 4000, fecha: "05/03/2020", sexo: "M"},
                         {id: 5, nombre: "Chris Evans", puntaje: 10900, fecha: "02/08/2010", sexo: "M"  },
@@ -113,14 +113,14 @@ let maximosGanadores = [{id:  4, nombre: "Cristiano Ronaldo", puntaje: 25000, fe
                         {id: 6, nombre: "Martina Rodriguez", puntaje: 19000, fecha: "08/06/2006", sexo: "F" },
                         {id: 7, nombre: "Martina Rodriguez", puntaje: 19000, fecha: "24/03/2021", sexo: "F" }];
 
+ */
 
-
-let navegar = Number(prompt(
+/* let navegar = Number(prompt(
     `Desea ver los maximos ganadores del juego?
     1 - Si
     2 - No
-                            `))
-do{
+                            `)) */
+/* do{
     if(navegar == 1){
         console.log( maximosGanadores);
         break;
@@ -132,9 +132,9 @@ do{
         break;
     }
 }while(navegar = true);
-
-
-let busqueda = Number(prompt(
+ 
+ */
+/* let busqueda = Number(prompt(
     `
      1 - filtrar por puntaje
      2 - filtrar pos sexo`))
@@ -152,7 +152,66 @@ switch(busqueda){
         break;
     }
 }
+ */
 
-/* const la = () => {
+
+
+function jugador ([]);
+
+const edadI = 20;
+
+const juego = () => {
+
+    e.preventDefault();
+   
+
+    for (let i = 14; i >= 0; i--){
+
+        let adivinar = document.getElementById("numberIgnacio");
+
+        if(adivinar === edadI){
+            respuesta.innerText = "Adivinaste felicitaciones";
+            break;
+        }
+        else if (adivinar !== edadI) {
+            respuesta.innerText =`Edad equivocada te quedan ${i} intentos`;
+            continue;
+        }
+        else if (!Number(adivinar)){
+            respuesta.innerText = `Ni siquiera ES UN NUMERO!!!!`;
+            continue;
+        }
+}
+}
+
+const contador = () =>{
     
-} */
+}
+
+let formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario (e){
+    e.preventDefault();
+
+    let nombre = document.querySelector('#nobmre').value;
+    let apellido = document.querySelector('#apellido').value;
+    let sexo = document.querySelector('#sexo').value;
+}
+
+let submitBtn = document.getElementById("enviar");
+
+let jugarBt = document.getElementById("jugadorAnotado");
+
+let datos = document.getElementById("datos");
+
+if(validarFormulario = true){
+    datos.innerText = `Bienvenido ${nombre} ${apellido}
+                        Sexo = ${sexo}`;
+    document.body.appendChild(datos);
+}
+
+submitBtn.onclick = () =>{
+    submitBtn.innerHTML = juego ;
+}
