@@ -7,56 +7,47 @@
     <title>Entrega</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,256L60,218.7C120,181,240,107,360,112C480,117,600,203,720,224C840,245,960,203,1080,154.7C1200,107,1320,53,1380,26.7L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
   <header>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L80,213.3C160,171,320,85,480,90.7C640,96,800,192,960,234.7C1120,277,1280,267,1360,261.3L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-    <div id="titulo-principal">
-      <h1>Bienvenidos</h1>
-    </div>
-    <form action="" id="formulario">
-    <div class="container">
-        <div class="row">
-          <div class="col">
-            <input type="text" id="nombre" placeholder="Ingrese un nombre" required>
-          </div>
-          <div class="col">
-            <input type="text" id="apellido" placeholder="Ingrese un Apellido" required>
-          </div>
-          <div class="col" id="sexo">
-            <p class="animate__animated animate__zoomIn">SEXO</p>
-            <input type="radio" name="sexo" value="1" class="animate__animated animate__zoomIn" required>M 
-            <input type="radio" name="sexo" value="2" class="animate__animated animate__zoomIn" required>F
-            <input type="radio" name="sexo" value="3" class="animate__animated animate__zoomIn" required>Otro
-          </div>
-          <div class="col">
-            <input type="submit" value="enviar" id="enviar">
-          </div>
-
-      
-        </div>
-      </div> 
-    </form>
-  </header>
-  <main>
     
-    <div id="jugar">
-      <button id="btn-play">Jugar</button>
+    <div id="titulo-principal">
+      <h1>Registro</h1>
     </div>
    
-    <div id="jugadorAnotado">
-      <p id="inicio">"Hola soy Ignacio Casado si adivinas mi edad te ganas una hamburguesa tienes 15 intentos"</p>
-      <input type="number" id="numberIgnacio" placeholder="Edad">
-      <p id="respuesta"></p>
-    </div>
-    <aside id="nombre-anotado">
-      <div id="contenedor-anotado">
-        <p id="datos"></p>
-
-      </div>
-    </aside>
+  </header>
+  <main>
+    <form action="" id="formulario">
+      <div class="container">
+          <div class="row">
+            <div class="row">
+              <label for="">Nombre</label>
+              <input type="text" id="nombre">
+              
+            </div>
+            <div class="row">
+              <label for="">Apellido</label>
+              <input type="text" id="apellido">
+              
+            </div>
+            <div class="row" id="sexo">
+              <label for="">Contraseña</label>
+              <input type="password" id="contrasenia">
+            </div>
+    
+            <button type="submit" id="enviar">Registrarse</button>
+            
+            <p id="warnings" class="warnings"></p>
+        
+          </div>
+        </div> 
+      </form>
+    
   </main>
 
 

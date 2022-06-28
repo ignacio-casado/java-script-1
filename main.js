@@ -156,8 +156,8 @@ switch(busqueda){
 
 
 
-function jugador ([]);
 
+/* 
 const edadI = 20;
 
 const juego = () => {
@@ -187,31 +187,99 @@ const juego = () => {
 const contador = () =>{
     
 }
+/* datos es p en div#contenedor-anotado */
+/* let datos = document.getElementById("datos"); */ 
 
-let formulario = document.getElementById("formulario");
+/* inputs */
+const nombre = document.querySelectorById("nombre");
+const apellido = document.querySelectorById("apellido");
+const pass = document.querySelectorById("contrasenia");
+const form = document.querySelectorById("formulario");
+const incompleto = document.querySelectorById("warnings");
 
+
+form.addEventListener("submit", e =>{
+    e.preventDefault();
+    let warnings = "";
+    let entrar = false;
+    incompleto.innerHTML = "";
+
+    if(nombre.value.lenght <4){
+        warnings += `El nombre tiene que tener al menos 5 caracteres <br>`;
+        entrar = true;
+    }
+    if(apellido.value.lenght <2){
+        warnings += `El apellido tiene que tener al menos 3 caracteres <br>`;
+        entrar = true;
+    }
+    if(pass.value.lenght <7){
+        warnings += `La contraseña debe tener al menos 8 caracteres <br>`;
+        entrar = true;
+    }
+    if(entrar){
+        incompleto.innerHTML = warnings;
+    }
+})
+
+console.log(form);
+
+/* validar formulario */
+/* let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", validarFormulario);
 
 function validarFormulario (e){
     e.preventDefault();
-
-    let nombre = document.querySelector('#nobmre').value;
+    let nombre = document.querySelector('#nombre').value;
     let apellido = document.querySelector('#apellido').value;
     let sexo = document.querySelector('#sexo').value;
+   
 }
+/* respuesta */
+/* Datos.innerHTML = validarFormulario;
 
-let submitBtn = document.getElementById("enviar");
+let enviar = document.getElementById("enviar");
+
+enviar.onclick = () =>{
+    datos.innerText = `Bienvenido `;
+}
 
 let jugarBt = document.getElementById("jugadorAnotado");
 
-let datos = document.getElementById("datos");
 
-if(validarFormulario = true){
-    datos.innerText = `Bienvenido ${nombre} ${apellido}
-                        Sexo = ${sexo}`;
-    document.body.appendChild(datos);
-}
+
+let submitBtn = document.getElementById("enviar");
 
 submitBtn.onclick = () =>{
-    submitBtn.innerHTML = juego ;
-}
+    datos.innerHTML = `Hora de jugar`  */;
+/* } */
+
+/* Niveles storage*/
+
+/* Edad */
+/* const nivel1 = [{edad: 20,}];
+
+let texto1 = `?`;
+
+ */
+/* Comida fav, 4 fotos*/
+/* const nivel2 = [{comida: "pizza", id: 1,
+                comida: "empanadas", id: 2,
+                comida: "asado", id: 3,
+                comida: "hamburguesa", id: 4,}]; */
+// animal fav ahorcado, imagen ilustrativa
+/* const nivel3 = [{animal: "aguila",}] */
+/* cancion fav, fragmento  */
+/* const nivel4 = [{cancion: "Bicho de ciudad", artista:"Los piojos", id:5,
+                cancion: "Bohemia rapsody", artista: "Queen", id: 6,
+                cancion: "Rezo por vos", artista: "Charly garcia", id: 7,
+                cancion: "Pistola", artista: "L-Gante", id: 8}];
+
+let texto4 = `TEMAZO`; */
+/* River  o Boca, foto*/
+/* const nivel5 = [{club: "River Plate", id: 9,
+                club: "Boca Juniors", id: 10}];
+
+let texto5 = `emoji`;
+ */
+/*  */
+ /* Puntaje */ 
