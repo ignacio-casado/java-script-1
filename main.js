@@ -191,11 +191,11 @@ const contador = () =>{
 /* let datos = document.getElementById("datos"); */ 
 
 /* inputs */
-const nombre = document.querySelectorById("nombre");
-const apellido = document.querySelectorById("apellido");
-const pass = document.querySelectorById("contrasenia");
-const form = document.querySelectorById("formulario");
-const incompleto = document.querySelectorById("warnings");
+const nombre = document.querySelector("#nombre");
+const apellido = document.querySelector("#apellido");
+const pass = document.querySelector("#contrasenia");
+const form = document.querySelector("#formulario");
+const incompleto = document.querySelector("#warnings");
 
 
 form.addEventListener("submit", e =>{
@@ -204,15 +204,15 @@ form.addEventListener("submit", e =>{
     let entrar = false;
     incompleto.innerHTML = "";
 
-    if(nombre.value.lenght <4){
-        warnings += `El nombre tiene que tener al menos 5 caracteres <br>`;
+    if(nombre.value.length <4){
+        warnings += `El nombre tiene que tener al menos 5 caracteres <br> `;
         entrar = true;
     }
-    if(apellido.value.lenght <2){
-        warnings += `El apellido tiene que tener al menos 3 caracteres <br>`;
+    if(apellido.value.length <2){
+        warnings += `El apellido tiene que tener al menos 3 caracteres <br> `;
         entrar = true;
     }
-    if(pass.value.lenght <7){
+    if(pass.value.length <7){
         warnings += `La contraseña debe tener al menos 8 caracteres <br>`;
         entrar = true;
     }
@@ -221,7 +221,7 @@ form.addEventListener("submit", e =>{
     }
 })
 
-console.log(form);
+console.log(nombre.length);
 
 /* validar formulario */
 /* let formulario = document.getElementById("formulario");
