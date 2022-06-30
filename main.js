@@ -30,16 +30,22 @@ form.addEventListener("submit", e =>{
     }
     if(entrar){
         incompleto.innerHTML = warnings;
+       
+        
     }
-    if(etrar = true){
+    if(nombre.value.length >4 && apellido.value.length >2 && pass.value.length >7 ){
         form.innerHTML = "";
         tituloMain.innerHTML = "";
         inicio.innerHTML = `Bienvenido a AdivinAR listo para jugar?
-        Nosotros tambien, pero actualmente nos encontramos en remodelacion :(`;
-
+        Nosotros tambien, pero actualmente nos encontramos en remodelacion :(`;  
     }
 })
+ /* form.innerHTML = "";
+        */
+/* if(entrar = true){
+   
 
+} */
 // En preparacion
 
 let puntaje = 0;
