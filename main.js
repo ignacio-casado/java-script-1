@@ -1,201 +1,13 @@
 
-/* Juego adivina mi edad */
-
-
-
-let numeroDeUsuario = 1;
-let menu = "menu" ;
-let puntaje = 0;
-let contadorDeUsuario = 0;
-const edad = 20;
-
-/* definimos funciones */
-
-/* const nombreDeUsuario = () =>{
-    alert("Bienvenido a juega con Ignacio");
-    let ingreseNombre = prompt("Ingrese su nombre");
-    let ingreseApellido = prompt("Ingrese su apellido");
-    mensajeAlert(`Bienvenido ${ingreseNombre} ${ingreseApellido} sos el jugador numero ${contadorDeUsuario}`);
-    
-} */
-
-/* const contador = () =>{
-    if(ingreseNombre == true && ingreseApellido == true){
-        contadorDeUsuario = contadorDeUsuario + 1;
-    }
-    else{
-        alert(`Se cometio un error en los datos por favor reingresar nombre y apellido`);
-    }
-}
- 
-/* alert(`Ahora si ${ingreseNombre} ${ingreseApellido} hora de jugar`); */
-
-/* const juego = () => {
-   
-
-    for (let i = 14; i >= 0; i--){
-
-        let adivinar = Number(prompt("Hola soy Ignacio Casado si adivinas mi edad te ganas una hamburguesa tienes 15 intentos"));
-
-        if(adivinar === edad){
-            alert("Felicitaciones te has ganado una hamburguesa");
-            break;
-        }
-        else if (adivinar !== edad) {
-            alert(`Edad equivocada te quedan ${i} intentos`);
-            continue;
-        }
-        else if (!Number(adivinar)){
-            alert("Por favor ingrese un numero");
-            continue;
-        }
-}
-} */ 
-
-/* const puntuacion = () =>{
-    if (adivinar = true){
-        puntaje = puntaje + 10;
-        alert(`Tu puntaje es de ${puntaje} puntos`);
-    }
-}
-
-function mensajeAlert(mensaje){
-    alert(mensaje);
-}
- */
-
-/* menu del juego */
-/* do{
-    menu = Number(prompt(`
-    Bienvenidos al juego de adivinar mi edad
-
-    1 - Registrar nombre de usuario.
-    2 - Juego.
-    3 - puntuacion.
-    4 - Salir.
-    `))
-
-
-    switch (menu){
-        case 1: {
-            nombreDeUsuario();
-            break;
-        }
-        case 2: {
-            juego();
-            break;
-        }
-        case 3: {
-            puntuacion();
-            break;
-        }
-         case 4: {
-            alert("Hasta pronto");
-            break;
-        }
-       
-        default: {
-            alert("Dato no valido");
-        }
-
-    }
-}while(menu !== 4 );
-
-/* array */
-/* let maximosGanadores = [{id:  4, nombre: "Cristiano Ronaldo", puntaje: 25000, fecha: "23/02/2002", sexo: "M"},
-                        {id: 2, nombre: "Gloria Martinez", puntaje: 45000, fecha: "26/08/2007", sexo: "F" },
-                        {id: 1, nombre: "Luis Gutierrez", puntaje: 4000, fecha: "05/03/2020", sexo: "M"},
-                        {id: 5, nombre: "Chris Evans", puntaje: 10900, fecha: "02/08/2010", sexo: "M"  },
-                        {id: 8, nombre: "Fernanda Carolina", puntaje: 7800, fecha: "13/09/2009", sexo: "Otro" },
-                        {id: 9, nombre: "Juan Quintero", puntaje: 67000, fecha: "09/12/2018", sexo: "M" },
-                        {id: 10, nombre: "Michael Ruiz", puntaje: 23300, fecha: "12/10/2013", sexo: "Otro"  },
-                        {id: 3, nombre: "Igncaio Casad", puntaje: 12000, fecha: "20/08/2021", sexo: "M" },
-                        {id: 6, nombre: "Martina Rodriguez", puntaje: 19000, fecha: "08/06/2006", sexo: "F" },
-                        {id: 7, nombre: "Martina Rodriguez", puntaje: 19000, fecha: "24/03/2021", sexo: "F" }];
-
- */
-
-/* let navegar = Number(prompt(
-    `Desea ver los maximos ganadores del juego?
-    1 - Si
-    2 - No
-                            `)) */
-/* do{
-    if(navegar == 1){
-        console.log( maximosGanadores);
-        break;
-    }
-    else if(navegar == 2){
-        break;
-    }
-    else{
-        break;
-    }
-}while(navegar = true);
- 
- */
-/* let busqueda = Number(prompt(
-    `
-     1 - filtrar por puntaje
-     2 - filtrar pos sexo`))
-
-switch(busqueda){
-    case 1: {
-        const buscadorPuntaje = maximosGanadores.filter((el) = el.puntaje < 67000);
-        console.log(buscadorPuntaje);
-        break;
-       
-    }
-    case 2: {
-        const buscadorSexo = maximosGanadores.find((el) = el.sexo )
-        console.log(buscadorSexo);
-        break;
-    }
-}
- */
-
-
-
-
-/* 
-const edadI = 20;
-
-const juego = () => {
-
-    e.preventDefault();
-   
-
-    for (let i = 14; i >= 0; i--){
-
-        let adivinar = document.getElementById("numberIgnacio");
-
-        if(adivinar === edadI){
-            respuesta.innerText = "Adivinaste felicitaciones";
-            break;
-        }
-        else if (adivinar !== edadI) {
-            respuesta.innerText =`Edad equivocada te quedan ${i} intentos`;
-            continue;
-        }
-        else if (!Number(adivinar)){
-            respuesta.innerText = `Ni siquiera ES UN NUMERO!!!!`;
-            continue;
-        }
-}
-}
-
-const contador = () =>{
-    
-}
-/* datos es p en div#contenedor-anotado */
-/* let datos = document.getElementById("datos"); */ 
-
-/* inputs */
+/* inicio */
 const nombre = document.querySelector("#nombre");
 const apellido = document.querySelector("#apellido");
 const pass = document.querySelector("#contrasenia");
 const form = document.querySelector("#formulario");
 const incompleto = document.querySelector("#warnings");
+const tituloMain = document.querySelector("#titulo-principal");
+const inicio = document.querySelector("#cambioDePagina");
+const btnPlay = document.querySelector("#btn-jugar");
 
 
 form.addEventListener("submit", e =>{
@@ -219,9 +31,71 @@ form.addEventListener("submit", e =>{
     if(entrar){
         incompleto.innerHTML = warnings;
     }
+    if(etrar = true){
+        form.innerHTML = "";
+        tituloMain.innerHTML = "";
+        inicio.innerHTML = `Bienvenido a AdivinAR listo para jugar?
+        Nosotros tambien, pero actualmente nos encontramos en remodelacion :(`;
+
+    }
 })
 
-console.log(nombre.length);
+// En preparacion
+
+let puntaje = 0;
+//  Cada nivel contara con un minuto para realizarse
+let reloj = 0; 
+// NIVEL 1
+
+// Cuantos años tiene lionel messi ? / INPUT
+const divUno = document.querySelector("#nivelUno");
+const respuestaUno = document.querySelector("#respuesta");
+
+const nivelUno = [{resultado: 35,}];
+
+const unoJson = JSON.stringify(nivelUno);
+localStorage.setItem("nivelUno", "resultado" );
+
+console.log(unoJson)
+
+const functionUno = () =>{
+    if(entradaUno = resultado){
+        puntaje = puntaje + 10;
+        divUno.innerHTML = "";
+    }else {
+        divUno.innerHTML = "";
+        respuesta.innerHTML = `Segui participando`;
+    }
+}
+
+
+// NIVEL 2
+
+// Quien fue presidente de la republica Argentina?
+
+const nivelDos = [{id: 1, nombre: "Luis Sáenz Peña", edad: "200",
+                    id: 2, nombre: "Ricardo Darin", edad: " 65",
+                    id: 3, nombre: "Javier Milei", edad: "51",
+                    id: 4, nombre: "Gabriela Sabatini", edad: "52",}];
+
+const dosJson = (nivelDos, opciones) => { localStorage.setItem(nivelDos, opciones )};
+
+for (const nivelDos of nombre){
+    dosJson(nombre.id, JSON.stringify(nombre));
+}
+
+// NIVEL 3
+
+// Cual de las siguientes no es una comida tipica de Argentina?
+const nivelTres = [{id: 5, comida: "Asado",
+                    id: 6, comida: "Empanadas",
+                    id: 7, comida: "Ceviche",
+                    id: 8, comida: ""}]
+
+
+
+
+
 
 /* validar formulario */
 /* let formulario = document.getElementById("formulario");

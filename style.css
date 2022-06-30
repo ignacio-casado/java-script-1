@@ -76,6 +76,20 @@ label{
 }
 .warnings{
     font-size: 12px;
+    font-weight: 500;
     color:#8363c0;
     margin: -58px -29px 0px 233px;
+}
+
+div#cambioDePagina{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: x-large;
+    color: aliceblue;
+}
+div#btn-jugar{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: x-large;
+    color: aliceblue;
 }
