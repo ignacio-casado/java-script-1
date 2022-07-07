@@ -8,7 +8,39 @@ const incompleto = document.querySelector("#warnings");
 const tituloMain = document.querySelector("#titulo-principal");
 const inicio = document.querySelector("#cambioDePagina");
 const btnPlay = document.querySelector("#btn-jugar");
+const nivelUnoDiv = document.querySelector("#nivelUno");
+const gridUnoDiv = document.querySelector("#imagenes");
+const puntajeUno = document.querySelector("#puntaje");
 
+function puntajeJuego(){
+    let puntajeInicial = 0;
+    let respuesta = true;
+
+    if (respuesta){
+        puntajeInicial = puntajeInicial + 10;
+    }
+    if(respuesta = false){
+        puntajeInicial = puntajeInicial;
+    }
+}
+function alertComplete (){
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Signed in successfully'
+      })
+}
 
 form.addEventListener("submit", e =>{
     e.preventDefault();
@@ -36,10 +68,36 @@ form.addEventListener("submit", e =>{
     if(nombre.value.length >4 && apellido.value.length >2 && pass.value.length >7 ){
         form.innerHTML = "";
         tituloMain.innerHTML = "";
-        inicio.innerHTML = `Bienvenido a AdivinAR listo para jugar?
-        Nosotros tambien, pero actualmente nos encontramos en remodelacion :(`;  
+        alertComplete();
+        inicio.innerHTML = `Bienvenido a AdivinAR listo para jugar?`;  
+       
     }
+
 })
+
+inicio.addEventListener("click", e =>{
+    e.preventDefault();
+    let gridUno = "";
+    let imagenes = "";
+})
+
+
+gridUnoDiv.addEventListener("click", e =>{
+    e.preventDefault();
+    puntajeJuego();
+
+    if(click = imagenUno){
+        alertComplete();
+        puntajeUno.innerHTML = puntajeJuego();
+        imagenes.innerHTML = `Correcto - Siguiente nivel`
+    }else{
+        puntajeUno.innerHTML = puntajeJuego();
+        imagenes.innerHTML = `Incorrecto`
+    }
+
+})
+   
+
  /* form.innerHTML = "";
         */
 /* if(entrar = true){
@@ -47,6 +105,13 @@ form.addEventListener("submit", e =>{
 
 } */
 // En preparacion
+
+function usuario (nombre, apellido, password){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.password = password;
+}
+
 
 let puntaje = 0;
 //  Cada nivel contara con un minuto para realizarse
@@ -95,13 +160,13 @@ for (const nivelDos of nombre){
 // Cual de las siguientes no es una comida tipica de Argentina?
 const nivelTres = [{id: 5, comida: "Asado",
                     id: 6, comida: "Empanadas",
-                    id: 7, comida: "Ceviche",
-                    id: 8, comida: ""}]
+                    id: 7, comida: "Ceviche",}]
 
 
 
 
-
+let on = 8/6;
+console.log(on);
 
 /* validar formulario */
 /* let formulario = document.getElementById("formulario");
