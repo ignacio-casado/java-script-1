@@ -75,6 +75,20 @@ form.addEventListener("submit", e =>{
 
 })
 
+function fetch (){
+
+    const url = ' https://pokeapi.co/api/v2/25/';
+
+    fetch(url);
+    .then(response => response.json())
+    .then(data => {
+        let element = document.getElementById("api");
+
+        element.innerHTML = `
+        <p>${data.name}</p>`
+    })
+}
+
 inicio.addEventListener("click", e =>{
     e.preventDefault();
     let gridUno = "";
@@ -101,10 +115,14 @@ gridUnoDiv.addEventListener("click", e =>{
  /* form.innerHTML = "";
         */
 /* if(entrar = true){
-   
+
+
 
 } */
 // En preparacion
+
+
+
 
 function usuario (nombre, apellido, password){
     this.nombre = nombre;
