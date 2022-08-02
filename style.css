@@ -93,3 +93,58 @@ div#btn-jugar{
     font-size: x-large;
     color: aliceblue;
 }
+div#nivelUno p{
+    margin-top: -145px;
+    text-align: center;
+    font-size: x-large;
+    color: aliceblue;
+}
+div#nivelUno img{
+    width: 400px;
+    height: auto;
+    margin-left: 600px;
+    border-radius: 10px;
+}
+div#nivelUno button{
+    border: none;
+    padding: 3px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: x-large;
+    color: aliceblue;
+    background: linear-gradient(to right, #8363c0, #4011b8);
+    margin-left: 600px;
+    margin-top: 30px;
+    border-radius: 30px;
+    display: block;
+    width: 400px;
+}
+div#nivelUno#incorrecto{
+    margin-right: 600px;
+}
+div#imagenes input{
+    display: none;
+}
+div#tiempo{
+    font: 700;
+}
+div#correcto{
+    align-items: center;
+    margin-left: 80px;
+}
+div#formAnswer button{
+    color: aliceblue;
+    background: linear-gradient(to right, #8363c0, #4011b8);
+    margin-left: 700px;
+    margin-top: 30px;
+    border-radius: 30px;
+    width: 200px;
+    height:80px ;
+    border: none;
+}
+#formAnswer#warningsDos p {
+    font-size: 12px;
+    font-weight: 500;
+    color:#8363c0;
+    margin: -58px -29px 0px 233px;
+}

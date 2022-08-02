@@ -1,5 +1,7 @@
 
 /* inicio */
+
+/* DOM */
 const nombre = document.querySelector("#nombre");
 const apellido = document.querySelector("#apellido");
 const pass = document.querySelector("#contrasenia");
@@ -11,6 +13,10 @@ const btnPlay = document.querySelector("#btn-jugar");
 const nivelUnoDiv = document.querySelector("#nivelUno");
 const gridUnoDiv = document.querySelector("#imagenes");
 const puntajeUno = document.querySelector("#puntaje");
+const user = document.querySelector("#user");
+const enviarLevelUno = document.querySelector("#btnEnviarUno");
+
+/* puntaje */
 
 function puntajeJuego(){
     let puntajeInicial = 0;
@@ -23,6 +29,7 @@ function puntajeJuego(){
         puntajeInicial = puntajeInicial;
     }
 }
+/* Sweet alert */
 function alertComplete (){
     const Toast = Swal.mixin({
         toast: true,
@@ -41,7 +48,27 @@ function alertComplete (){
         title: 'Signed in successfully'
       })
 }
+function alertCorrecto (){
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Correcto!!!'
+      })
+}
 
+
+/* logica de entrar */
 form.addEventListener("submit", e =>{
     e.preventDefault();
     let warnings = "";
@@ -62,8 +89,6 @@ form.addEventListener("submit", e =>{
     }
     if(entrar){
         incompleto.innerHTML = warnings;
-       
-        
     }
     if(nombre.value.length >4 && apellido.value.length >2 && pass.value.length >7 ){
         form.innerHTML = "";
@@ -73,53 +98,98 @@ form.addEventListener("submit", e =>{
        
     }
 
+
+    
 })
 
-function fetch (){
 
-    const url = ' https://pokeapi.co/api/v2/25/';
+const enviar = document.getElementById('siguiente');
+const edadMessi = 35;
 
-    fetch(url);
-    .then(response => response.json())
-    .then(data => {
-        let element = document.getElementById("api");
+/* funcion temporizador */
 
-        element.innerHTML = `
-        <p>${data.name}</p>`
-    })
+/* function temporizador(id, inicio, final){
+    this.id = id;
+    this.inicio = inicio;
+    this.final = final;
+    this.contador = this.inicio;
+
+    this.conteoSegundos = function(){
+        if (this.contador == this.final){
+            this.conteoSegundos = null;
+            return;
+        }
+
+        document.getElementById(this.id).innerHTML = this.contador--;
+        setTimeout(this.conteoSegundos.bind(this), 1000)
+    };
+}
+let temporizador = new temporizador('temporizador', 10, 0)
+temporizador();
+conteoSegundos();  */
+
+//Donde responder con cambio de display
+function mostrar (){
+    
+    document.getElementById('btnEnviarUno').style.display = "block"; 
 }
 
+
+/* NIVEL 1 */
+    
 inicio.addEventListener("click", e =>{
+    
     e.preventDefault();
-    let gridUno = "";
-    let imagenes = "";
+    inicio.innerHTML = "";
+    nivelUnoDiv.innerHTML = `
+    <p>Cuantos años tiene Messi?
+        Nivel 1</p>
+    <img src="./img/Messi.webp" id= "messiFoto">`;
+    
+    mostrar();
+    const ganador = document.querySelector('#correcto').style.display = "block"; 
+    user.addEventListener("submit", e =>{
+        document.querySelector('#warningsDos');
+    
+       
+        
+        e.preventDefault();
+        let paso = false;
+        let warningsDos = ``;
+       
+    
+        if(ganador.value >= 1 && ganador  < 20){
+            paso = true;
+            warningsDos += `Estas muy lejos....`;
+        }
+        if (ganador.value >= 20 && ganador < 30){
+            paso = true;
+            warningsDos += `Cerca pero no.....`;
+        }
+        if (ganador.value >= 30 && ganador < 35){
+            paso = true;
+            warningsDos += `Muy muy cerca pero no.....`;
+        }
+        if (ganador.value >= 36){
+            paso = true;
+            warningsDos += `Te pasaste`;
+        }
+        if (ganador.value != Number){
+            paso = true;
+            warningsDos += `Ni siquiera haz tipeado un numero ....`;
+        }
+        if(paso){
+            warningsDos.innerHTML = warningsDos;
+        }
+        if(ganador.value == 35){
+            alertCorrecto();
+            nivelUnoDiv.innerHTML = ``;
+        }
+    })
+    
+    
 })
 
-
-gridUnoDiv.addEventListener("click", e =>{
-    e.preventDefault();
-    puntajeJuego();
-
-    if(click = imagenUno){
-        alertComplete();
-        puntajeUno.innerHTML = puntajeJuego();
-        imagenes.innerHTML = `Correcto - Siguiente nivel`
-    }else{
-        puntajeUno.innerHTML = puntajeJuego();
-        imagenes.innerHTML = `Incorrecto`
-    }
-
-})
-   
-
- /* form.innerHTML = "";
-        */
-/* if(entrar = true){
-
-
-
-} */
-// En preparacion
 
 
 
@@ -169,9 +239,9 @@ const nivelDos = [{id: 1, nombre: "Luis Sáenz Peña", edad: "200",
 
 const dosJson = (nivelDos, opciones) => { localStorage.setItem(nivelDos, opciones )};
 
-for (const nivelDos of nombre){
+/* for (const nivelDos of nombre){
     dosJson(nombre.id, JSON.stringify(nombre));
-}
+} */
 
 // NIVEL 3
 
@@ -184,7 +254,7 @@ const nivelTres = [{id: 5, comida: "Asado",
 
 
 let on = 8/6;
-console.log(on);
+
 
 /* validar formulario */
 /* let formulario = document.getElementById("formulario");
